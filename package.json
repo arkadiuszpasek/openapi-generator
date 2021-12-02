@@ -1,0 +1,18 @@
+{
+  "name": "openapi-generator",
+  "version": "1.0.0",
+  "description": "OpenAPI generator for typescript",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf dist/ rm -rf src/",
+    "generate": "openapi-generator-cli generate -i $YAML_FILE_PATH -g typescript-fetch -o src --additional-properties=typescriptThreePlus=true,supportsES6=true",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "^2.4.18",
+    "typescript": "^4.5.2"
+  }
+}
